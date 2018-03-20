@@ -13,9 +13,6 @@ function deviceOrientationHandler (eventData) {
   document.getElementById("doTiltFB").innerHTML = Math.round(tiltFB);
   document.getElementById("doDirection").innerHTML = Math.round(dir);
 
-  if(80<=tiltFB<=100 ){
-    vibrateSimple();
-  }
 
   var logo = document.getElementById("imgLogo");
   logo.style.webkitTransform = "rotate(" + tiltLR + "deg) rotate3d(1,0,0, " + (tiltFB * -1) + "deg)";
@@ -23,7 +20,4 @@ function deviceOrientationHandler (eventData) {
   logo.style.transform = "rotate(" + tiltLR + "deg) rotate3d(1,0,0, " + (tiltFB * -1) + "deg)";
 }
 
-function vibrateSimple() {
-  navigator.vibrate(200);
-}
 
