@@ -14,7 +14,7 @@ function deviceOrientationHandler (eventData) {
   document.getElementById("doTiltFB").innerHTML = Math.round(tiltFB);
   document.getElementById("doDirection").innerHTML = Math.round(dir);
 
-  if(80<=tiltFB=<100){
+  if(80<=tiltFB){
     vibrateSimple();
   }
 
