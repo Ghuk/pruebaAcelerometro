@@ -1,5 +1,6 @@
 if ('DeviceOrientationEvent' in window) {
   window.addEventListener('deviceorientation', deviceOrientationHandler, false);
+  document.getElementById("doeSupported").innerText = "True";
 } else {
   document.getElementById('logoContainer').innerText = 'Device Orientation API not supported.';
 }
